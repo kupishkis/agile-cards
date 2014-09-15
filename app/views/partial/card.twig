@@ -3,6 +3,7 @@
         <i class="icon fa fa-{{ card.icon }}"></i>
         <div class="title">
             <h3>{% if card.parent|length > 0 %}{{ card.parent }} : {% endif %}{{ card.key }}</h3>
+            <p class="assignee">{{ card.assignee }}</p>
             <h2>{{ card.summary }}</h2>
         </div>
     </div>
