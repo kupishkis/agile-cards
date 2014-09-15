@@ -28,6 +28,7 @@ class Cards
         if (!$xml instanceof \SimpleXMLElement) {
             return false;
         }
+
         $cards = [];
 
         foreach ($xml->channel->item as $card) {
@@ -46,19 +47,19 @@ class Cards
             $id = (string) $card->key;
             $cards[$id] = [
                 'id'          => $id,
-                'parent'      => (string)$card->parent,
-                'key'         => (string)$card->key,
-                'type'        => (string)$card->type,
-                'summary'     => (string)$card->summary,
-                'description' => (string)$card->description,
-                'priority'    => (string)$card->priority,
-                'status'      => (string)$card->status,
-                'resolution'  => (string)$card->resolution,
-                'assignee'    => (string)$card->assignee,
-                'reporter'    => (string)$card->reporter,
-                'estimate'    => (string)$card->timeestimate,
-                'timespent'   => (string)$card->aggregatetimespent,
-                'icon'        => $icon
+                'parent'      => (string) $card->parent,
+                'key'         => (string) $card->key,
+                'type'        => (string) $card->type,
+                'summary'     => (string) $card->summary,
+                'description' => (string) $card->description,
+                'priority'    => (string) $card->priority,
+                'status'      => (string) $card->status,
+                'resolution'  => (string) $card->resolution,
+                'assignee'    => (string) $card->assignee,
+                'reporter'    => (string) $card->reporter,
+                'estimate'    => (string) $card->timeestimate,
+                'timespent'   => (string) $card->aggregatetimespent,
+                'icon'        => $icon,
 
             ];
         }
